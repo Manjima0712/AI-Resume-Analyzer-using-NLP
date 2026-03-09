@@ -1,4 +1,4 @@
-import PyPDF2
+import fitz  # PyMuPDF
 import docx2txt
 
 class ResumeParser:
@@ -23,10 +23,9 @@ class ResumeParser:
     @staticmethod
     def _extract_from_pdf(file_path):
         text = ""
-        with open(file_path, 'rb') as file:
-            reader = PyPDF2.PdfReader(file)
-            for page in reader.pages:
-                text += page.extract_text() + "\n"
+        with fitz.open(file_path) as doc:
+            for page in doc:
+                text += page.get_text() + "\n"
         return text
 
     @staticmethod
