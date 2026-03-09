@@ -1,0 +1,42 @@
+[
+  {
+    "job_id": 1,
+    "title": "Senior Data Scientist",
+    "company": "TechCorp AI",
+    "description": "We are looking for a Senior Data Scientist to join our AI team. You will design and implement machine learning models, work with large datasets, and deploy solutions to production. You will collaborate with cross-functional teams and mentor junior data scientists. Strong communication and leadership skills required.",
+    "required_skills": ["Python", "Machine Learning", "TensorFlow", "PyTorch", "SQL", "Statistics", "Pandas", "NumPy", "Scikit-learn", "Data Analysis"],
+    "preferred_skills": ["Spark", "Kubernetes", "MLOps", "Deep Learning", "NLP", "Docker", "AWS", "Git", "Tableau"]
+  },
+  {
+    "job_id": 2,
+    "title": "Full Stack Web Developer",
+    "company": "WebSolutions Ltd",
+    "description": "Seeking a Full Stack Web Developer with strong expertise in React and Node.js. Responsibilities include building scalable web applications, designing RESTful APIs, and working in an Agile environment. Experience with cloud deployment (AWS or GCP) is a plus. You will work closely with designers and product managers to deliver high-quality user experiences.",
+    "required_skills": ["JavaScript", "React", "Node.js", "HTML", "CSS", "REST API", "Git", "SQL", "MongoDB"],
+    "preferred_skills": ["TypeScript", "Next.js", "AWS", "Docker", "Redux", "GraphQL", "PostgreSQL", "Testing", "CI/CD"]
+  },
+  {
+    "job_id": 3,
+    "title": "NLP Engineer",
+    "company": "Language AI Co",
+    "description": "Looking for an NLP Engineer to design and build state-of-the-art natural language processing systems. You will work on text classification, named entity recognition, machine translation, and conversational AI. Familiarity with transformer architectures and fine-tuning pre-trained models required. You will also be responsible for model evaluation, deployment, and monitoring.",
+    "required_skills": ["Python", "NLP", "spaCy", "NLTK", "BERT", "Transformers", "Scikit-learn", "Deep Learning", "Git"],
+    "preferred_skills": ["PyTorch", "HuggingFace", "FastAPI", "MLOps", "Docker", "Kubernetes", "Elasticsearch", "GPT", "Text Mining"]
+  },
+  {
+    "job_id": 4,
+    "title": "DevOps Engineer",
+    "company": "CloudOps Inc",
+    "description": "We need a DevOps Engineer to manage our cloud infrastructure, automate CI/CD pipelines, and ensure system reliability. You will work with Docker, Kubernetes, and various AWS services. Experience with Infrastructure as Code (Terraform or Ansible) is essential. Monitoring, alerting, and incident response are key responsibilities.",
+    "required_skills": ["Docker", "Kubernetes", "AWS", "CI/CD", "Linux", "Python", "Terraform", "Git", "Bash"],
+    "preferred_skills": ["GCP", "Azure", "Jenkins", "GitHub Actions", "Ansible", "Prometheus", "Grafana", "Nginx", "Redis"]
+  },
+  {
+    "job_id": 5,
+    "title": "Machine Learning Engineer",
+    "company": "AI Startup Hub",
+    "description": "Join our team as an ML Engineer to build, train, and deploy machine learning models at scale. You will work on recommendation systems, fraud detection, and predictive analytics. Strong software engineering skills combined with machine learning expertise required. Experience with MLOps and model serving frameworks is a big plus.",
+    "required_skills": ["Python", "Machine Learning", "Scikit-learn", "SQL", "Git", "TensorFlow", "Data Analysis", "Statistics", "REST API"],
+    "preferred_skills": ["MLOps", "Docker", "Kubernetes", "AWS SageMaker", "Feature Engineering", "PyTorch", "Spark", "Airflow", "XGBoost"]
+  }
+]

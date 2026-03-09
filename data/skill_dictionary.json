@@ -1,0 +1,83 @@
+{
+  "Programming Languages": [
+    "Python", "Java", "JavaScript", "TypeScript", "C", "C++", "C#", "Go", "Rust", "Swift",
+    "Kotlin", "Ruby", "PHP", "Scala", "R", "MATLAB", "Julia", "Perl", "Haskell", "Elixir",
+    "Dart", "Lua", "Shell", "Bash", "PowerShell", "SQL", "PL/SQL", "T-SQL"
+  ],
+  "Web Frameworks": [
+    "React", "Angular", "Vue.js", "Next.js", "Nuxt.js", "Svelte", "Django", "Flask", "FastAPI",
+    "Spring Boot", "Spring MVC", "Express.js", "Node.js", "Ruby on Rails", "Laravel", "Symfony",
+    "ASP.NET", "ASP.NET Core", "Blazor", "jQuery", "Bootstrap", "Tailwind CSS", "Material UI",
+    "Ant Design", "Chakra UI", "Redux", "MobX", "GraphQL", "REST API", "SOAP"
+  ],
+  "Machine Learning & AI": [
+    "Machine Learning", "Deep Learning", "Neural Networks", "NLP", "Natural Language Processing",
+    "Computer Vision", "Reinforcement Learning", "Transfer Learning", "GANs", "Transformers",
+    "BERT", "GPT", "LLM", "Large Language Models", "Prompt Engineering", "Fine-tuning",
+    "Supervised Learning", "Unsupervised Learning", "Semi-supervised Learning",
+    "Feature Engineering", "Model Deployment", "MLOps", "AutoML", "Explainable AI"
+  ],
+  "ML Libraries & Frameworks": [
+    "TensorFlow", "PyTorch", "Keras", "Scikit-learn", "XGBoost", "LightGBM", "CatBoost",
+    "Hugging Face", "spaCy", "NLTK", "Gensim", "OpenCV", "Pillow", "FastAI",
+    "MXNet", "JAX", "Theano", "Caffe", "ONNX", "TensorRT", "CoreML"
+  ],
+  "Data Science": [
+    "Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly", "SciPy", "Statsmodels",
+    "Data Analysis", "Data Visualization", "Statistical Analysis", "A/B Testing",
+    "Time Series Analysis", "Regression", "Classification", "Clustering", "Dimensionality Reduction",
+    "PCA", "t-SNE", "UMAP", "EDA", "Feature Selection", "Cross-validation", "Hyperparameter Tuning",
+    "Grid Search", "Random Search", "Bayesian Optimization"
+  ],
+  "Databases": [
+    "MySQL", "PostgreSQL", "SQLite", "Oracle", "Microsoft SQL Server", "MariaDB",
+    "MongoDB", "Redis", "Cassandra", "DynamoDB", "Firebase", "Firestore",
+    "Elasticsearch", "Solr", "Neo4j", "InfluxDB", "CouchDB", "Supabase",
+    "SQLAlchemy", "Prisma", "Sequelize", "Mongoose", "Hibernate"
+  ],
+  "Cloud & DevOps": [
+    "AWS", "Google Cloud", "Azure", "GCP", "Heroku", "DigitalOcean", "Vercel", "Netlify",
+    "Docker", "Kubernetes", "Terraform", "Ansible", "Jenkins", "GitHub Actions", "CircleCI",
+    "Travis CI", "GitLab CI", "CI/CD", "Infrastructure as Code", "Serverless",
+    "AWS Lambda", "AWS EC2", "AWS S3", "AWS RDS", "AWS SageMaker", "Google Vertex AI",
+    "Azure ML", "Microservices", "Load Balancing", "CDN", "Nginx", "Apache"
+  ],
+  "Version Control & Collaboration": [
+    "Git", "GitHub", "GitLab", "Bitbucket", "SVN", "Mercurial",
+    "Jira", "Confluence", "Trello", "Notion", "Slack", "Agile", "Scrum", "Kanban",
+    "Code Review", "Pull Requests", "Branching Strategies"
+  ],
+  "Big Data": [
+    "Apache Spark", "Hadoop", "Kafka", "Hive", "Pig", "HBase", "Flink",
+    "Databricks", "Snowflake", "Redshift", "BigQuery", "Data Lake", "Data Warehouse",
+    "ETL", "ELT", "Data Pipeline", "Airflow", "dbt", "Tableau", "Power BI", "Looker"
+  ],
+  "Cybersecurity": [
+    "Network Security", "Penetration Testing", "Ethical Hacking", "Vulnerability Assessment",
+    "OWASP", "SSL/TLS", "Cryptography", "OAuth", "JWT", "LDAP", "Firewall", "IDS/IPS",
+    "SIEM", "SOC", "Incident Response", "Forensics", "Kali Linux", "Metasploit", "Burp Suite"
+  ],
+  "Mobile Development": [
+    "Android", "iOS", "React Native", "Flutter", "Xamarin", "Ionic",
+    "Swift", "Objective-C", "Kotlin", "Jetpack Compose", "SwiftUI",
+    "Mobile UI/UX", "App Store Optimization", "Push Notifications", "Firebase"
+  ],
+  "Soft Skills": [
+    "Communication", "Leadership", "Teamwork", "Problem Solving", "Critical Thinking",
+    "Time Management", "Project Management", "Adaptability", "Creativity", "Collaboration",
+    "Presentation Skills", "Mentoring", "Conflict Resolution", "Stakeholder Management",
+    "Decision Making", "Analytical Thinking", "Attention to Detail", "Self-motivated"
+  ],
+  "Testing & QA": [
+    "Unit Testing", "Integration Testing", "End-to-End Testing", "Test Automation",
+    "Selenium", "Cypress", "Playwright", "Jest", "PyTest", "JUnit", "Mocha",
+    "Test-Driven Development", "TDD", "BDD", "Performance Testing", "JMeter", "k6",
+    "Quality Assurance", "Bug Tracking", "Regression Testing"
+  ],
+  "Architecture & Design": [
+    "System Design", "Software Architecture", "Microservices", "Monolithic Architecture",
+    "Event-Driven Architecture", "Domain-Driven Design", "SOLID Principles", "Design Patterns",
+    "RESTful API Design", "API Gateway", "Message Queue", "RabbitMQ", "Kafka",
+    "High Availability", "Scalability", "Clean Architecture", "CQRS", "Event Sourcing"
+  ]
+}

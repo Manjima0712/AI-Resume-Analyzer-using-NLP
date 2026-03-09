@@ -1,0 +1,150 @@
+id,name,email,phone,experience_years,education,skills_raw,resume_text
+1,Alice Johnson,alice.johnson@email.com,+1-555-0101,5,B.Tech Computer Science,"Python,Machine Learning,TensorFlow,pandas,Flask,SQL,Git","Alice Johnson | alice.johnson@email.com | +1-555-0101
+SUMMARY
+Experienced Data Scientist with 5 years of expertise in machine learning, deep learning, and data analysis. Passionate about building scalable AI solutions.
+EXPERIENCE
+Senior Data Scientist | TechCorp | 2021-Present
+- Built predictive models using TensorFlow achieving 94% accuracy
+- Developed ETL pipelines processing 10M+ records daily using Apache Spark
+- Collaborated with cross-functional teams to deploy ML models to production
+Data Analyst | DataViz Inc | 2019-2021  
+- Analyzed customer behavior patterns using Python and Pandas
+- Created interactive dashboards using Tableau for executive reporting
+EDUCATION
+B.Tech in Computer Science | IIT Delhi | 2019 | GPA: 8.7/10
+SKILLS
+Python, R, TensorFlow, PyTorch, Scikit-learn, SQL, PostgreSQL, Flask, Git, Jupyter, Pandas, NumPy, Tableau, Apache Spark"
+
+2,Bob Martinez,bob.martinez@email.com,+1-555-0102,3,B.Sc Computer Science,"JavaScript,React,Node.js,MongoDB,CSS,HTML,Git,AWS","Bob Martinez | bob.martinez@email.com | +1-555-0102
+SUMMARY
+Full Stack Developer with 3 years of experience building responsive web applications using modern JavaScript frameworks.
+EXPERIENCE
+Full Stack Developer | WebSolutions | 2022-Present
+- Developed 15+ React applications with Redux state management
+- Built RESTful APIs using Node.js and Express serving 50K+ users
+- Deployed applications on AWS EC2 and S3 with 99.9% uptime
+Junior Developer | StartupHub | 2021-2022
+- Created frontend components using React and TypeScript
+- Integrated third-party APIs and payment gateways (Stripe)
+EDUCATION
+B.Sc in Computer Science | UCLA | 2021 | GPA: 3.6/4.0
+SKILLS
+JavaScript, TypeScript, React, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, HTML, CSS, Bootstrap, Tailwind CSS, AWS, Docker, Git, GitHub"
+
+3,Carol Smith,carol.smith@email.com,+1-555-0103,7,M.Sc Machine Learning,"Python,Deep Learning,NLP,PyTorch,spaCy,BERT,Kubernetes,MLOps","Carol Smith | carol.smith@email.com | +1-555-0103
+SUMMARY
+AI/NLP Engineer with 7 years of experience in natural language processing, transformer models, and production ML systems.
+EXPERIENCE
+Lead NLP Engineer | AI Innovations | 2020-Present
+- Designed BERT-based text classification models for 20+ languages
+- Built NLP pipelines processing 1M+ documents per day
+- Led team of 6 engineers in building an end-to-end MLOps platform
+NLP Researcher | University Lab | 2017-2020
+- Published 3 papers on transformer architectures in ACL/EMNLP
+- Developed custom spaCy models for medical NER with 92% F1 score
+EDUCATION
+M.Sc in Machine Learning | Stanford University | 2017
+B.Tech in Computer Science | NIT | 2015
+SKILLS
+Python, PyTorch, TensorFlow, HuggingFace, spaCy, NLTK, BERT, GPT, NLP, Kubernetes, Docker, MLOps, FastAPI, Redis, Elasticsearch"
+
+4,David Lee,david.lee@email.com,+1-555-0104,2,B.E Information Technology,"Java,Spring Boot,MySQL,REST API,Maven,JUnit","David Lee | david.lee@email.com | +1-555-0104
+SUMMARY
+Backend Java Developer with 2 years of experience in enterprise application development using Spring Boot and microservices.
+EXPERIENCE
+Java Developer | InfySoft | 2023-Present
+- Developed 5 microservices using Spring Boot and REST APIs
+- Optimized MySQL queries reducing response time by 40%
+- Implemented JUnit tests achieving 85% code coverage
+EDUCATION
+B.E in Information Technology | Anna University | 2023 | GPA: 8.2/10
+SKILLS
+Java, Spring Boot, Spring MVC, Hibernate, MySQL, REST API, Maven, JUnit, Git, Linux, Docker basics"
+
+5,Emily Chen,emily.chen@email.com,+1-555-0105,4,M.Tech Data Science,"Python,Data Science,Tableau,PowerBI,SQL,Azure,Statistics","Emily Chen | emily.chen@email.com | +1-555-0105
+SUMMARY
+Data Analyst and Business Intelligence specialist with 4 years driving data-driven decisions through compelling visualizations.
+EXPERIENCE
+Senior Data Analyst | RetailGiant | 2022-Present
+- Built executive dashboards in Tableau adopted by 200+ stakeholders
+- Ran A/B tests improving conversion rates by 23%
+- Automated reports saving 15 hours/week using Python scripts
+Data Analyst | FinanceMax | 2020-2022
+- Analyzed sales data across 50 markets using SQL and Excel
+- Created Power BI dashboards for real-time KPI monitoring
+EDUCATION
+M.Tech in Data Science | VIT | 2020 | GPA: 8.9/10
+SKILLS
+Python, SQL, Tableau, Power BI, Excel, Azure, Statistics, Machine Learning, Pandas, NumPy, R, SAS"
+
+6,Frank Wilson,frank.wilson@email.com,+1-555-0106,6,B.Tech ECE,"Embedded Systems,C,Arduino,Raspberry Pi,IoT,MQTT,Python","Frank Wilson | frank.wilson@email.com | +1-555-0106
+SUMMARY
+IoT and Embedded Systems Engineer with 6 years of experience designing smart device firmware and IoT architectures.
+EXPERIENCE
+Senior IoT Engineer | SmartDevices | 2021-Present
+- Designed firmware for 50K+ deployed IoT devices using C
+- Built MQTT-based real-time telemetry system processing 100K messages/sec
+Lead Embedded Developer | TechHardware | 2018-2021
+- Developed motor control algorithms for industrial robots
+EDUCATION
+B.Tech in ECE | IIT Bombay | 2018
+SKILLS
+C, C++, Python, Arduino, Raspberry Pi, IoT, MQTT, FreeRTOS, Linux, Embedded Linux, Git"
+
+7,Grace Kim,grace.kim@email.com,+1-555-0107,3,B.Sc Computer Science,"Cybersecurity,Penetration Testing,Python,Kali Linux,Networking","Grace Kim | grace.kim@email.com | +1-555-0107
+SUMMARY
+Cybersecurity Analyst with 3 years of experience in penetration testing, vulnerability assessment, and security operations.
+EXPERIENCE
+Security Analyst | SecureNet | 2023-Present
+- Conducted 30+ penetration tests identifying critical vulnerabilities
+- Implemented SIEM solutions reducing incident response time by 60%
+- Wrote Python scripts automating 80% of security audit tasks
+EDUCATION
+B.Sc in Computer Science (Security Specialization) | UCS | 2023 | GPA: 3.8/4.0
+SKILLS
+Python, Kali Linux, Metasploit, Burp Suite, Wireshark, Nmap, Network Security, OWASP, JWT, OAuth, SQL Injection, SIEM"
+
+8,Henry Brown,henry.brown@email.com,+1-555-0108,8,MBA + B.Tech,"Product Management,Agile,Scrum,JIRA,SQL,Data Analysis","Henry Brown | henry.brown@email.com | +1-555-0108
+SUMMARY
+Senior Product Manager with 8 years of experience delivering software products from conception to launch in Agile environments.
+EXPERIENCE
+Senior Product Manager | ProductCo | 2020-Present
+- Led cross-functional team of 20 to launch 3 major product features
+- Defined product roadmap increasing user retention by 35%
+Director of Product | StartupX | 2016-2020
+- Grew user base from 10K to 500K users in 18 months
+EDUCATION
+MBA | IIM Ahmedabad | 2016 | B.Tech Computer Science | NIT | 2014
+SKILLS
+Product Management, Agile, Scrum, JIRA, Confluence, SQL, Data Analysis, User Research, A/B Testing, Roadmapping, Stakeholder Management"
+
+9,Iris Patel,iris.patel@email.com,+1-555-0109,1,B.Tech Computer Science,"Python,Machine Learning,Flask,HTML,CSS,JavaScript,Git","Iris Patel | iris.patel@email.com | +1-555-0109
+SUMMARY
+Recent graduate with strong foundation in machine learning and web development, seeking first professional opportunity.
+EXPERIENCE
+Internship | AI Startup | Summer 2025
+- Built sentiment analysis model using Python and Scikit-learn achieving 88% accuracy
+- Developed data collection API using Flask serving 1K requests/day
+Projects
+Resume Analyzer - NLP tool extracting skills from resumes (Python, spaCy, Flask)
+Stock Predictor - LSTM model for stock price prediction (TensorFlow, Pandas)
+EDUCATION
+B.Tech in Computer Science | SRM University | 2025 | GPA: 8.5/10
+SKILLS
+Python, Machine Learning, Scikit-learn, TensorFlow, Flask, HTML, CSS, JavaScript, Git, Pandas, NumPy, SQL"
+
+10,Jack Turner,jack.turner@email.com,+1-555-0110,5,M.Sc Computer Science,"DevOps,Docker,Kubernetes,AWS,Terraform,Jenkins,Python,Linux","Jack Turner | jack.turner@email.com | +1-555-0110
+SUMMARY
+DevOps/Cloud Engineer with 5 years of experience building and maintaining scalable cloud infrastructure and CI/CD pipelines.
+EXPERIENCE
+Senior DevOps Engineer | CloudFirst | 2022-Present
+- Managed Kubernetes clusters handling 50M+ requests/day
+- Reduced deployment time by 70% through CI/CD pipeline optimization
+- Saved $200K/year through cloud cost optimization on AWS
+DevOps Engineer | InfraTech | 2019-2022
+- Migrated monolithic app to microservices using Docker and Kubernetes
+- Implemented Terraform IaC for 100+ AWS resources
+EDUCATION
+M.Sc Computer Science | Georgia Tech | 2019
+SKILLS
+Docker, Kubernetes, AWS, GCP, Azure, Terraform, Ansible, Jenkins, GitHub Actions, Python, Bash, Linux, Nginx, Redis, Prometheus, Grafana"

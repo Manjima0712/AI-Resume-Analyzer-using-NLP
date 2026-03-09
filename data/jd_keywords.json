@@ -1,0 +1,5 @@
+{
+  "action_verbs": ["managed", "developed", "designed", "created", "led", "improved", "increased", "optimized", "implemented", "resolved", "collaborated", "analyzed", "delivered", "built", "maintained"],
+  "tools_and_tech": ["agile", "scrum", "jira", "git", "github", "aws", "azure", "gcp", "docker", "kubernetes", "ci/cd", "rest", "api", "sql", "nosql", "linux", "windows", "macos"],
+  "soft_skills": ["communication", "leadership", "teamwork", "problem solving", "time management", "critical thinking", "adaptability", "project management"]
+}
