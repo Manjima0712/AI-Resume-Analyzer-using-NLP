@@ -4,6 +4,10 @@ import io
 import csv
 import threading
 from werkzeug.utils import secure_filename
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 from core.parser import ResumeParser
 from core.preprocess import TextPreprocessor
 from core.ats_checker import ATSChecker
@@ -14,7 +18,7 @@ from core.suggestions import SuggestionsEngine
 from core.ranker import Ranker
 
 app = Flask(__name__)
-app.secret_key = 'super_secret_hr_key'
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'default_fallback_key_for_dev_only')
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
