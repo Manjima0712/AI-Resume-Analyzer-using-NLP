@@ -112,7 +112,9 @@ def analyzer():
 
                 # 3. JD Match Score
                 jd_match = jd_m.calculate_match(cleaned_resume, cleaned_jd)
-                missing_keywords = jd_m.find_missing_keywords(resume_text.lower(), job_description.lower())
+                missing_keywords = jd_m.find_missing_keywords(
+                    resume_text.lower(), job_description.lower(), target_role
+                )
 
                 # 4. Skill Match
                 skill_match, matched_skills, missing_skills = skill_m.match(resume_text, job_description, target_role)
