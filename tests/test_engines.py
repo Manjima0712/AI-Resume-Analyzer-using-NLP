@@ -105,6 +105,7 @@ def test_skill_matcher_score_in_range():
 def test_analysis_result_insert(db_session):
     """AnalysisResult should be insertable and retrievable."""
     from models import AnalysisResult
+    from sqlalchemy import select
     r = AnalysisResult(
         filename="test.pdf",
         target_role="Data Scientist",
@@ -121,7 +122,7 @@ def test_analysis_result_insert(db_session):
     db_session.session.add(r)
     db_session.session.commit()
 
-    fetched = AnalysisResult.query.first()
+    fetched = db_session.session.execute(select(AnalysisResult)).scalars().first()
     assert fetched is not None
     assert fetched.recommendation == "Moderate Match"
     assert "PyTorch" in fetched.get_missing_skills()
@@ -129,6 +130,7 @@ def test_analysis_result_insert(db_session):
 def test_ranking_batch_and_results_insert(db_session):
     """RankingBatch with RankingResult rows should save and relate correctly."""
     from models import RankingBatch, RankingResult
+    from sqlalchemy import select
     batch = RankingBatch(target_role="ML Engineer", job_description="ML JD")
     db_session.session.add(batch)
     db_session.session.flush()
@@ -148,7 +150,7 @@ def test_ranking_batch_and_results_insert(db_session):
         db_session.session.add(row)
     db_session.session.commit()
 
-    saved = RankingBatch.query.get(batch.id)
+    saved = db_session.session.get(RankingBatch, batch.id)
     assert saved is not None
     assert len(saved.results) == 3
     assert saved.results[0].rank == 1

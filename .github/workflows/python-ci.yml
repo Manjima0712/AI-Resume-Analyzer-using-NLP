@@ -14,30 +14,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Set up Python 3.11
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: "3.11"
 
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update -qq
-        sudo apt-get install -y libmupdf-dev
+    - name: Cache pip packages
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+        restore-keys: ${{ runner.os }}-pip-
 
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+
+    - name: Download NLP models
+      run: |
         python -m nltk.downloader punkt stopwords words averaged_perceptron_tagger
         python -m spacy download en_core_web_sm
 
-    - name: Set up environment
+    - name: Set up test environment
       run: |
-        echo "FLASK_SECRET_KEY=ci_test_secret" >> .env
+        echo "FLASK_SECRET_KEY=ci_test_secret" > .env
         echo "DATABASE_URL=sqlite:///test_ci.db" >> .env
 
-    - name: Test with pytest
+    - name: Run tests
       run: |
-        python -m pytest tests/ -v
+        python -m pytest tests/ -v --tb=short
