@@ -2,12 +2,14 @@ from flask import Flask, render_template, request, flash, redirect, url_for, Res
 import os
 import io
 import csv
+import uuid
 import threading
 from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 
-# Load environment variables
+# Load environment variables first
 load_dotenv()
+
 from core.parser import ResumeParser
 from core.preprocess import TextPreprocessor
 from core.ats_checker import ATSChecker
@@ -16,16 +18,26 @@ from core.skill_matcher import SkillMatcher
 from core.shortlist_engine import ShortlistEngine
 from core.suggestions import SuggestionsEngine
 from core.ranker import Ranker
+from models import db, AnalysisResult, RankingBatch, RankingResult
 
+# ── App Configuration ──────────────────────────────────────────────────────────
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'default_fallback_key_for_dev_only')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///resume_analyzer.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-# Background thread loading
+db.init_app(app)
+
+# Create tables automatically on first run
+with app.app_context():
+    db.create_all()
+
+# ── Background service loader ─────────────────────────────────────────────────
 preprocessor = None
 jd_matcher = None
 skill_matcher = None
@@ -61,6 +73,8 @@ TARGET_ROLES = [
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
+# ── Analyzer Route ────────────────────────────────────────────────────────────
 @app.route('/', methods=['GET', 'POST'])
 def analyzer():
     if request.method == 'POST':
@@ -117,6 +131,27 @@ def analyzer():
 
                 os.remove(file_path)
 
+                # 7. Persist to database
+                try:
+                    record = AnalysisResult(
+                        filename=filename,
+                        target_role=target_role,
+                        job_description=job_description[:1000],   # cap to 1000 chars
+                        ats_score=ats_score,
+                        jd_match=jd_match,
+                        skill_match=skill_match,
+                        composite_score=shortlist_score,
+                        recommendation=shortlist_label,
+                        weakest_metric=weakest_metric,
+                    )
+                    record.set_missing_skills(missing_skills[:10])
+                    record.set_missing_keywords([kw.title() for kw in missing_keywords[:10]])
+                    db.session.add(record)
+                    db.session.commit()
+                except Exception as db_err:
+                    print(f"DB save failed (non-critical): {db_err}")
+                    db.session.rollback()
+
                 return render_template('analyzer.html',
                     roles=TARGET_ROLES,
                     target_role=target_role,
@@ -143,6 +178,8 @@ def analyzer():
 
     return render_template('analyzer.html', roles=TARGET_ROLES)
 
+
+# ── Ranker Route ──────────────────────────────────────────────────────────────
 @app.route('/ranker', methods=['GET', 'POST'])
 def ranker():
     if request.method == 'POST':
@@ -197,15 +234,46 @@ def ranker():
                         os.remove(file_path)
 
         ranked = Ranker.rank_resumes(results)
-        # Cache for CSV export (store only serialisable data)
+
+        # Cache for CSV export
         session['last_ranker_results'] = ranked
         session['last_ranker_role'] = target_role
+
+        # Persist to database
+        try:
+            batch = RankingBatch(
+                target_role=target_role,
+                job_description=job_description[:1000]
+            )
+            db.session.add(batch)
+            db.session.flush()   # get batch.id before commit
+
+            for i, r in enumerate(ranked, 1):
+                row = RankingResult(
+                    batch_id=batch.id,
+                    rank=i,
+                    filename=r.get('filename', ''),
+                    ats_score=r.get('ats_score', 0),
+                    jd_match=r.get('jd_match', 0),
+                    skill_match=r.get('skill_match', 0),
+                    composite_score=r.get('shortlist_score', 0),
+                    recommendation=r.get('shortlist_label', ''),
+                    weakest_metric=r.get('weakest_metric', ''),
+                )
+                db.session.add(row)
+            db.session.commit()
+            session['last_batch_id'] = batch.id
+        except Exception as db_err:
+            print(f"DB save failed (non-critical): {db_err}")
+            db.session.rollback()
+
         return render_template('ranker.html', roles=TARGET_ROLES, results=ranked,
                                target_role=target_role, jd_provided=bool(job_description))
 
     return render_template('ranker.html', roles=TARGET_ROLES)
 
 
+# ── CSV Export ────────────────────────────────────────────────────────────────
 @app.route('/ranker/export')
 def ranker_export():
     """Stream the last ranker results as a downloadable CSV file."""
@@ -237,6 +305,23 @@ def ranker_export():
         mimetype='text/csv',
         headers={'Content-Disposition': f'attachment; filename=ranker_{safe_role}.csv'}
     )
+
+
+# ── History Routes ────────────────────────────────────────────────────────────
+@app.route('/history')
+def history():
+    """View stored analysis and ranking history from the database."""
+    analyses = AnalysisResult.query.order_by(AnalysisResult.created_at.desc()).limit(50).all()
+    batches  = RankingBatch.query.order_by(RankingBatch.created_at.desc()).limit(20).all()
+    return render_template('history.html', analyses=analyses, batches=batches)
+
+
+@app.route('/history/batch/<int:batch_id>')
+def history_batch(batch_id):
+    """View detailed ranking results for one batch."""
+    batch = RankingBatch.query.get_or_404(batch_id)
+    return render_template('history_batch.html', batch=batch)
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

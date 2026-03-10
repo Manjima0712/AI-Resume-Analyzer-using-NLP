@@ -13,6 +13,7 @@
         <div class="nav-links">
             <a href="/" class="{{ 'active' if request.endpoint == 'analyzer' else '' }}">Analyzer</a>
             <a href="/ranker" class="{{ 'active' if request.endpoint == 'ranker' else '' }}">Ranker</a>
+            <a href="/history" class="{{ 'active' if request.endpoint == 'history' or request.endpoint == 'history_batch' else '' }}">History</a>
         </div>
     </nav>
     
