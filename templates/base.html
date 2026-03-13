@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AI ATS Checker{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">HR Screen Tool</div>
+        <div class="nav-links">
+            <a href="/" class="{{ 'active' if request.endpoint == 'analyzer' else '' }}">Analyzer</a>
+            <a href="/ranker" class="{{ 'active' if request.endpoint == 'ranker' else '' }}">Ranker</a>
+            <a href="/history" class="{{ 'active' if request.endpoint == 'history' or request.endpoint == 'history_batch' else '' }}">History</a>
+        </div>
+    </nav>
+    
+    <main class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-alert">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

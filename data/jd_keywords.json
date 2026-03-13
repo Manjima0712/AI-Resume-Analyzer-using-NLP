@@ -1,0 +1,93 @@
+{
+  "action_verbs": [
+    "managed", "developed", "designed", "created", "led", "improved",
+    "increased", "optimized", "implemented", "resolved", "collaborated",
+    "analyzed", "delivered", "built", "maintained", "automated", "deployed",
+    "integrated", "architected", "refactored", "mentored", "coordinated",
+    "monitored", "migrated", "scaled", "reduced", "achieved", "launched",
+    "contributed", "established", "streamlined", "enhanced", "researched",
+    "evaluated", "configured", "tested", "documented"
+  ],
+  "tools_and_tech": [
+    "agile", "scrum", "jira", "git", "github", "aws", "azure", "gcp",
+    "docker", "kubernetes", "ci/cd", "rest", "api", "sql", "nosql",
+    "linux", "windows", "macos", "terraform", "ansible", "jenkins",
+    "github actions", "gitlab ci", "prometheus", "grafana", "nginx",
+    "redis", "kafka", "spark", "airflow", "elasticsearch"
+  ],
+  "soft_skills": [
+    "communication", "leadership", "teamwork", "problem solving",
+    "time management", "critical thinking", "adaptability",
+    "project management", "mentoring", "collaboration", "stakeholder management",
+    "attention to detail", "analytical thinking", "presentation skills",
+    "decision making", "self-motivated", "conflict resolution"
+  ],
+  "role_keywords": {
+    "Python Developer": [
+      "python", "django", "flask", "fastapi", "rest api", "sql", "postgresql",
+      "mysql", "git", "docker", "aws", "linux", "pytest", "ci/cd",
+      "orm", "asyncio", "celery", "redis", "gunicorn", "nginx",
+      "microservices", "unit testing", "code review", "agile"
+    ],
+    "Data Scientist": [
+      "machine learning", "deep learning", "statistics", "python", "sql",
+      "tensorflow", "pytorch", "scikit-learn", "pandas", "numpy",
+      "data visualization", "feature engineering", "model evaluation",
+      "hypothesis testing", "regression", "classification", "clustering",
+      "nlp", "big data", "spark", "data pipeline", "jupyter",
+      "experiment design", "a/b testing", "predictive modeling"
+    ],
+    "Data Analyst": [
+      "sql", "excel", "tableau", "power bi", "python", "r", "pandas",
+      "data cleaning", "data visualization", "dashboard", "reporting",
+      "a/b testing", "kpi", "business intelligence", "etl", "looker",
+      "google analytics", "bigquery", "pivot tables", "data wrangling",
+      "stakeholder reporting", "ad hoc analysis"
+    ],
+    "ML Engineer": [
+      "machine learning", "model deployment", "mlops", "python", "tensorflow",
+      "pytorch", "docker", "kubernetes", "aws", "gcp", "ci/cd",
+      "feature store", "data pipeline", "airflow", "spark", "redis",
+      "model monitoring", "onnx", "fastapi", "rest api", "scalable systems",
+      "distributed computing", "model serving"
+    ],
+    "Frontend Developer": [
+      "javascript", "typescript", "react", "html", "css", "rest api",
+      "git", "responsive design", "next.js", "tailwind", "webpack",
+      "jest", "web accessibility", "figma", "ui/ux", "performance optimization",
+      "cross-browser compatibility", "component design", "redux", "graphql"
+    ],
+    "Backend Developer": [
+      "java", "python", "node.js", "rest api", "sql", "nosql",
+      "microservices", "docker", "kubernetes", "aws", "postgresql",
+      "redis", "kafka", "system design", "api gateway", "grpc",
+      "message queue", "nginx", "linux", "unit testing", "ci/cd",
+      "auth", "jwt", "oauth", "scalability"
+    ],
+    "Full Stack Developer": [
+      "javascript", "react", "node.js", "python", "django", "html", "css",
+      "rest api", "sql", "mongodb", "git", "docker", "aws", "next.js",
+      "typescript", "postgresql", "redux", "ci/cd", "jwt", "oauth",
+      "nginx", "agile", "testing", "responsive design"
+    ],
+    "DevOps Engineer": [
+      "linux", "aws", "azure", "gcp", "docker", "kubernetes", "terraform",
+      "ansible", "jenkins", "ci/cd", "bash", "python", "monitoring",
+      "prometheus", "grafana", "nginx", "helm", "git", "iac",
+      "incident management", "sre", "elk stack", "argocd", "security"
+    ],
+    "QA Engineer": [
+      "selenium", "cypress", "playwright", "postman", "python", "java",
+      "manual testing", "automation testing", "jira", "api testing",
+      "performance testing", "jmeter", "bdd", "cucumber", "regression testing",
+      "bug reporting", "test planning", "agile", "junit", "testng"
+    ],
+    "UI/UX Developer": [
+      "figma", "adobe xd", "html", "css", "javascript", "wireframing",
+      "prototyping", "user research", "usability testing", "react",
+      "design system", "interaction design", "accessibility",
+      "typography", "color theory", "user personas", "a/b testing",
+      "motion design", "visual design", "information architecture"
+    ]
+  }
+}
