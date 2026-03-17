@@ -44,19 +44,19 @@
                     <td>
                         <div class="score-cell">
                             <span class="cell-num {% if r.ats_score >= 75 %}green{% elif r.ats_score >= 60 %}amber{% else %}red{% endif %}">{{ r.ats_score }}</span>
-                            <div class="mini-bar"><div class="mini-bar-fill {% if r.ats_score >= 75 %}green{% elif r.ats_score >= 60 %}amber{% else %}red{% endif %}" style="width:{{ r.ats_score }}%"></div></div>
+                            <div class="mini-bar"><div class="mini-bar-fill {% if r.ats_score >= 75 %}green{% elif r.ats_score >= 60 %}amber{% else %}red{% endif %}" data-width="{{ r.ats_score }}%"></div></div>
                         </div>
                     </td>
                     <td>
                         <div class="score-cell">
                             <span class="cell-num {% if r.jd_match >= 75 %}green{% elif r.jd_match >= 60 %}amber{% else %}red{% endif %}">{{ r.jd_match }}%</span>
-                            <div class="mini-bar"><div class="mini-bar-fill {% if r.jd_match >= 75 %}green{% elif r.jd_match >= 60 %}amber{% else %}red{% endif %}" style="width:{{ r.jd_match }}%"></div></div>
+                            <div class="mini-bar"><div class="mini-bar-fill {% if r.jd_match >= 75 %}green{% elif r.jd_match >= 60 %}amber{% else %}red{% endif %}" data-width="{{ r.jd_match }}%"></div></div>
                         </div>
                     </td>
                     <td>
                         <div class="score-cell">
                             <span class="cell-num {% if r.skill_match >= 70 %}green{% elif r.skill_match >= 55 %}amber{% else %}red{% endif %}">{{ r.skill_match }}%</span>
-                            <div class="mini-bar"><div class="mini-bar-fill {% if r.skill_match >= 70 %}green{% elif r.skill_match >= 55 %}amber{% else %}red{% endif %}" style="width:{{ r.skill_match }}%"></div></div>
+                            <div class="mini-bar"><div class="mini-bar-fill {% if r.skill_match >= 70 %}green{% elif r.skill_match >= 55 %}amber{% else %}red{% endif %}" data-width="{{ r.skill_match }}%"></div></div>
                         </div>
                     </td>
                     <td>
@@ -75,4 +75,14 @@
         <div class="empty-state"><p>No results found for this batch.</p></div>
     {% endif %}
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('.mini-bar-fill').forEach(function(bar) {
+            if (bar.dataset.width) {
+                bar.style.width = bar.dataset.width;
+            }
+        });
+    });
+</script>
 {% endblock %}
