@@ -139,3 +139,64 @@ EDUCATION
 M.Sc Computer Science | Georgia Tech | 2019
 SKILLS
 Docker, Kubernetes, AWS, GCP, Azure, Terraform, Ansible, Jenkins, GitHub Actions, Python, Bash, Linux, Nginx, Redis, Prometheus, Grafana","DevOps,Docker,Kubernetes,AWS,Terraform,Jenkins,Python,Linux",5,M.Sc Computer Science,Unknown
+11,"Kevin O'Connor | kevin.oconnor@email.com | +1-555-0111
+SUMMARY
+Frontend UI/UX Developer with 4 years building accessible, high-performance web applications.
+EXPERIENCE
+UI Engineer | DesignSystems Inc | 2021-Present
+- Spearheaded migration from legacy AngularJS to Vue 3
+- Built custom component library used by 5 product teams
+Frontend Developer | CreativeAgency | 2019-2021
+- Developed 20+ responsive landing pages for Fortune 500 clients
+EDUCATION
+B.A. Graphic Design | RISD | 2019
+SKILLS
+JavaScript, Vue.js, React, HTML5, CSS3, SASS, Tailwind CSS, Figma, Accessibility (WCAG), Jest","JavaScript,Vue.js,React,HTML5,CSS3,Figma,Accessibility",4,B.A. Graphic Design,Unknown
+12,"Laura Silva | laura.silva@email.com | +1-555-0112
+SUMMARY
+Machine Learning Engineer focusing on computer vision and generative AI architectures.
+EXPERIENCE
+ML Engineer | VisionTech | 2022-Present
+- Trained ResNet and YOLOv8 models for real-time object detection
+- Deployed models to edge devices using ONNX and TensorRT
+Data Scientist | HealthAI algorithms | 2020-2022
+- Analyzed medical imaging datasets using PyTorch
+EDUCATION
+M.Sc Artificial Intelligence | Imperial College | 2020
+SKILLS
+Python, C++, PyTorch, TensorFlow, OpenCV, ONNX, CUDA, Docker, Git","Python,Deep Learning,Computer Vision,PyTorch,TensorFlow,OpenCV",4,M.Sc Artificial Intelligence,Unknown
+13,"Michael Chang | michael.chang@email.com | +1-555-0113
+SUMMARY
+Cloud Architect and Backend Developer with 7 years experience designing highly available distributed systems.
+EXPERIENCE
+Cloud Architect | EnterpriseCloud | 2020-Present
+- Designed serverless architecture processing 5M events/hour on AWS Lambda
+- Led team of 8 backend engineers
+Backend Developer | DataStream | 2017-2020
+- Developed core Go microservices and gRPC APIs
+EDUCATION
+B.Sc Computer Engineering | Waterloo | 2017
+SKILLS
+Go, Python, Java, AWS, Kubernetes, Terraform, gRPC, PostgreSQL, Redis, Kafka, Elasticsearch","Go,Python,AWS,Kubernetes,System Design,Kafka",7,B.Sc Computer Engineering,Unknown
+14,"Nina Patel | nina.patel@email.com | +1-555-0114
+SUMMARY
+QA Automation Engineer with 3 years establishing test frameworks and CI/CD quality gates.
+EXPERIENCE
+QA Engineer | QualityFirst | 2021-Present
+- Automated 400+ end-to-end tests using Cypress and Selenium
+- Integrated automated test suites into Jenkins pipelines
+EDUCATION
+B.Tech IT | Manipal University | 2021
+SKILLS
+Python, JavaScript, Selenium, Cypress, Playwright, pytest, API Testing, Postman, Jenkins, Git","QA Automation,Selenium,Cypress,Testing,Python,Jenkins",3,B.Tech IT,Unknown
+15,"Oscar Reyes | oscar.reyes@email.com | +1-555-0115
+SUMMARY
+Full Stack Python Developer specializing in Django and React integrations.
+EXPERIENCE
+Software Engineer | WebMakers | 2022-Present
+- Built multi-tenant SaaS application serving 10K businesses
+- Implemented real-time features using Django Channels and WebSockets
+EDUCATION
+B.S. Computer Science | UT Austin | 2022
+SKILLS
+Python, Django, FastAPI, JavaScript, React, PostgreSQL, Docker, Redis, Celery, AWS","Python,Django,React,PostgreSQL,Docker,Celery",2,B.S. Computer Science,Unknown
