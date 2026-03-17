@@ -19,8 +19,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Download NLTK data packs (fix: stopwords not stopword)
 RUN python -m nltk.downloader punkt stopwords words averaged_perceptron_tagger
 
-# Download spaCy model
-RUN python -m spacy download en_core_web_sm
+# Note: spacy model en_core_web_sm is already installed via requirements.txt URL
 
 # Copy all project files
 COPY . .
