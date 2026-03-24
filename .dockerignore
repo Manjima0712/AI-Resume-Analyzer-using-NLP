@@ -9,3 +9,5 @@ uploads/*
 !uploads/.gitkeep
 .vscode/
 .idea/
+*.db
+instance/*.db
